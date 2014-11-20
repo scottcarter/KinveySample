@@ -7,13 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88B13AD7003B108206A1B601 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB03BD6AA55926F15C1CD6D8 /* libPods.a */; };
+		A77636011A1CE2C300FBA5C9 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A77636001A1CE2C300FBA5C9 /* ListViewController.m */; };
+		A77636061A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = A77636051A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
+		A77636091A1CEC8100FBA5C9 /* SNLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77636081A1CEC8100FBA5C9 /* SNLog.swift */; };
+		A776360D1A1CED0000FBA5C9 /* VideoComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = A776360C1A1CED0000FBA5C9 /* VideoComposition.m */; };
+		A7B41B261A1D487A0045048B /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B41B251A1D487A0045048B /* MovieViewController.swift */; };
+		A7B41B2E1A1E7C250045048B /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B41B2D1A1E7C250045048B /* Project.m */; };
 		A7FDFEF21A195C17009835CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFEF11A195C17009835CA /* main.m */; };
 		A7FDFEF51A195C17009835CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFEF41A195C17009835CA /* AppDelegate.m */; };
-		A7FDFEF81A195C17009835CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFEF71A195C17009835CA /* ViewController.m */; };
+		A7FDFEF81A195C17009835CA /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFEF71A195C17009835CA /* SignInViewController.m */; };
 		A7FDFEFB1A195C17009835CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFEF91A195C17009835CA /* Main.storyboard */; };
 		A7FDFEFD1A195C17009835CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFEFC1A195C17009835CA /* Images.xcassets */; };
 		A7FDFF001A195C17009835CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFEFE1A195C17009835CA /* LaunchScreen.xib */; };
 		A7FDFF0C1A195C17009835CA /* KinveySampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF0B1A195C17009835CA /* KinveySampleTests.m */; };
+		A7FDFF581A195C7F009835CA /* KWLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF181A195C7F009835CA /* KWLinkButton.m */; };
+		A7FDFF591A195C7F009835CA /* KWSocialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF1A1A195C7F009835CA /* KWSocialButton.m */; };
+		A7FDFF5B1A195C7F009835CA /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF1D1A195C7F009835CA /* facebook.png */; };
+		A7FDFF5C1A195C7F009835CA /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF1E1A195C7F009835CA /* facebook@2x.png */; };
+		A7FDFF5D1A195C7F009835CA /* linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF1F1A195C7F009835CA /* linkedin.png */; };
+		A7FDFF5E1A195C7F009835CA /* linkedin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF201A195C7F009835CA /* linkedin@2x.png */; };
+		A7FDFF5F1A195C7F009835CA /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF211A195C7F009835CA /* twitter.png */; };
+		A7FDFF601A195C7F009835CA /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF221A195C7F009835CA /* twitter@2x.png */; };
+		A7FDFF621A195C7F009835CA /* KCSSignInDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF271A195C7F009835CA /* KCSSignInDelegate.m */; };
+		A7FDFF631A195C7F009835CA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF281A195C7F009835CA /* LICENSE */; };
+		A7FDFF641A195C7F009835CA /* KWCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF2A1A195C7F009835CA /* KWCreateAccountViewController.m */; };
+		A7FDFF651A195C7F009835CA /* KWResendEmailVerificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF2C1A195C7F009835CA /* KWResendEmailVerificationController.m */; };
+		A7FDFF661A195C7F009835CA /* KWResetPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF2E1A195C7F009835CA /* KWResetPasswordController.m */; };
+		A7FDFF6E1A195C7F009835CA /* KWSignInBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF3F1A195C7F009835CA /* KWSignInBaseViewController.m */; };
+		A7FDFF6F1A195C7F009835CA /* KWSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF411A195C7F009835CA /* KWSignInViewController.m */; };
+		A7FDFF711A195C7F009835CA /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF451A195C7F009835CA /* lock.png */; };
+		A7FDFF721A195C7F009835CA /* lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF461A195C7F009835CA /* lock@2x.png */; };
+		A7FDFF731A195C7F009835CA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF471A195C7F009835CA /* logo.png */; };
+		A7FDFF741A195C7F009835CA /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF481A195C7F009835CA /* user.png */; };
+		A7FDFF751A195C7F009835CA /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFF491A195C7F009835CA /* user@2x.png */; };
+		A7FDFF761A195C7F009835CA /* KWIconTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF4C1A195C7F009835CA /* KWIconTextField.m */; };
+		A7FDFF791A195C7F009835CA /* UIColor+KinveyWidgets.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF511A195C7F009835CA /* UIColor+KinveyWidgets.m */; };
+		A7FDFF7A1A195C7F009835CA /* KWGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF541A195C7F009835CA /* KWGradientView.m */; };
+		A7FDFF7B1A195C7F009835CA /* KWLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF561A195C7F009835CA /* KWLineView.m */; };
+		A7FDFF811A195D06009835CA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF801A195D06009835CA /* Accounts.framework */; };
+		A7FDFF831A195D0C009835CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF821A195D0C009835CA /* CoreGraphics.framework */; };
+		A7FDFF851A195D13009835CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF841A195D13009835CA /* CoreLocation.framework */; };
+		A7FDFF871A195D1E009835CA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF861A195D1E009835CA /* libsqlite3.dylib */; };
+		A7FDFF891A195D30009835CA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF881A195D30009835CA /* MobileCoreServices.framework */; };
+		A7FDFF8B1A195D37009835CA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF8A1A195D37009835CA /* Security.framework */; };
+		A7FDFF8D1A195D41009835CA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF8C1A195D41009835CA /* Social.framework */; };
+		A7FDFF8F1A195D4A009835CA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF8E1A195D4A009835CA /* SystemConfiguration.framework */; };
+		A7FDFF921A195D9C009835CA /* KinveyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF911A195D9C009835CA /* KinveyKit.framework */; };
+		A7FDFFB81A195F20009835CA /* MKGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF971A195F20009835CA /* MKGradientButton.m */; };
+		A7FDFFBA1A195F20009835CA /* MKCGTypeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF9B1A195F20009835CA /* MKCGTypeHelpers.m */; };
+		A7FDFFBB1A195F20009835CA /* MD5Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFF9E1A195F20009835CA /* MD5Helpers.m */; };
+		A7FDFFBC1A195F20009835CA /* NSArray+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFA01A195F20009835CA /* NSArray+MKHelpers.m */; };
+		A7FDFFBD1A195F20009835CA /* NSDate+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFA21A195F20009835CA /* NSDate+MKHelpers.m */; };
+		A7FDFFBE1A195F20009835CA /* NSString+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFA41A195F20009835CA /* NSString+MKHelpers.m */; };
+		A7FDFFBF1A195F20009835CA /* UIColor+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFA71A195F20009835CA /* UIColor+MKHelpers.m */; };
+		A7FDFFC01A195F20009835CA /* UIFont+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFA91A195F20009835CA /* UIFont+MKHelpers.m */; };
+		A7FDFFC11A195F20009835CA /* UIImage+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFAB1A195F20009835CA /* UIImage+MKHelpers.m */; };
+		A7FDFFC21A195F20009835CA /* UILabel+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFAD1A195F20009835CA /* UILabel+MKHelpers.m */; };
+		A7FDFFC31A195F20009835CA /* UIView+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFAF1A195F20009835CA /* UIView+MKHelpers.m */; };
+		A7FDFFC41A195F20009835CA /* UIWindow+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFFB11A195F20009835CA /* UIWindow+MKHelpers.m */; };
+		A7FDFFC51A195F20009835CA /* mkgradientbutton_custom_class.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFFB31A195F20009835CA /* mkgradientbutton_custom_class.png */; };
+		A7FDFFC61A195F20009835CA /* mkgradientbutton_draguibutton.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFFB41A195F20009835CA /* mkgradientbutton_draguibutton.png */; };
+		A7FDFFC71A195F20009835CA /* mkgradientbuttons.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FDFFB51A195F20009835CA /* mkgradientbuttons.png */; };
+		A7FDFFCC1A196A1E009835CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFFCB1A196A1E009835CA /* Foundation.framework */; };
+		A7FDFFCE1A196A26009835CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFFCD1A196A26009835CA /* UIKit.framework */; };
+		A7FDFFD01A196BC4009835CA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FDFF251A195C7F009835CA /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +85,113 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7BB3268ECAE91C0070356EA5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9EFC7D3860A6CE0C43EEE1F0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A77635FF1A1CE2C300FBA5C9 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		A77636001A1CE2C300FBA5C9 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		A77636021A1CE57D00FBA5C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A77636041A1CEC4400FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
+		A77636051A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
+		A77636071A1CEC8100FBA5C9 /* KinveySample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KinveySample-Bridging-Header.h"; sourceTree = "<group>"; };
+		A77636081A1CEC8100FBA5C9 /* SNLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNLog.swift; sourceTree = "<group>"; };
+		A776360B1A1CECF300FBA5C9 /* VideoComposition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoComposition.h; sourceTree = "<group>"; };
+		A776360C1A1CED0000FBA5C9 /* VideoComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoComposition.m; sourceTree = "<group>"; };
+		A7B41B251A1D487A0045048B /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		A7B41B2B1A1E7C130045048B /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		A7B41B2C1A1E7C1D0045048B /* Project.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		A7B41B2D1A1E7C250045048B /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		A7FDFEEC1A195C17009835CA /* KinveySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinveySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FDFEF01A195C17009835CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7FDFEF11A195C17009835CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7FDFEF31A195C17009835CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7FDFEF41A195C17009835CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A7FDFEF61A195C17009835CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A7FDFEF71A195C17009835CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A7FDFEF61A195C17009835CA /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		A7FDFEF71A195C17009835CA /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		A7FDFEFA1A195C17009835CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7FDFEFC1A195C17009835CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A7FDFEFF1A195C17009835CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A7FDFF051A195C17009835CA /* KinveySampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinveySampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FDFF0A1A195C17009835CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7FDFF0B1A195C17009835CA /* KinveySampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinveySampleTests.m; sourceTree = "<group>"; };
+		A7FDFF171A195C7F009835CA /* KWLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLinkButton.h; sourceTree = "<group>"; };
+		A7FDFF181A195C7F009835CA /* KWLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLinkButton.m; sourceTree = "<group>"; };
+		A7FDFF191A195C7F009835CA /* KWSocialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSocialButton.h; sourceTree = "<group>"; };
+		A7FDFF1A1A195C7F009835CA /* KWSocialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSocialButton.m; sourceTree = "<group>"; };
+		A7FDFF1D1A195C7F009835CA /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		A7FDFF1E1A195C7F009835CA /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
+		A7FDFF1F1A195C7F009835CA /* linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin.png; sourceTree = "<group>"; };
+		A7FDFF201A195C7F009835CA /* linkedin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkedin@2x.png"; sourceTree = "<group>"; };
+		A7FDFF211A195C7F009835CA /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		A7FDFF221A195C7F009835CA /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
+		A7FDFF251A195C7F009835CA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		A7FDFF261A195C7F009835CA /* KCSSignInDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCSSignInDelegate.h; sourceTree = "<group>"; };
+		A7FDFF271A195C7F009835CA /* KCSSignInDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCSSignInDelegate.m; sourceTree = "<group>"; };
+		A7FDFF281A195C7F009835CA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A7FDFF291A195C7F009835CA /* KWCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWCreateAccountViewController.h; sourceTree = "<group>"; };
+		A7FDFF2A1A195C7F009835CA /* KWCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWCreateAccountViewController.m; sourceTree = "<group>"; };
+		A7FDFF2B1A195C7F009835CA /* KWResendEmailVerificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWResendEmailVerificationController.h; sourceTree = "<group>"; };
+		A7FDFF2C1A195C7F009835CA /* KWResendEmailVerificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWResendEmailVerificationController.m; sourceTree = "<group>"; };
+		A7FDFF2D1A195C7F009835CA /* KWResetPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWResetPasswordController.h; sourceTree = "<group>"; };
+		A7FDFF2E1A195C7F009835CA /* KWResetPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWResetPasswordController.m; sourceTree = "<group>"; };
+		A7FDFF3E1A195C7F009835CA /* KWSignInBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSignInBaseViewController.h; sourceTree = "<group>"; };
+		A7FDFF3F1A195C7F009835CA /* KWSignInBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSignInBaseViewController.m; sourceTree = "<group>"; };
+		A7FDFF401A195C7F009835CA /* KWSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSignInViewController.h; sourceTree = "<group>"; };
+		A7FDFF411A195C7F009835CA /* KWSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSignInViewController.m; sourceTree = "<group>"; };
+		A7FDFF421A195C7F009835CA /* KWSignInViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSignInViewControllerDelegate.h; sourceTree = "<group>"; };
+		A7FDFF451A195C7F009835CA /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		A7FDFF461A195C7F009835CA /* lock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock@2x.png"; sourceTree = "<group>"; };
+		A7FDFF471A195C7F009835CA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		A7FDFF481A195C7F009835CA /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		A7FDFF491A195C7F009835CA /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@2x.png"; sourceTree = "<group>"; };
+		A7FDFF4B1A195C7F009835CA /* KWIconTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWIconTextField.h; sourceTree = "<group>"; };
+		A7FDFF4C1A195C7F009835CA /* KWIconTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWIconTextField.m; sourceTree = "<group>"; };
+		A7FDFF501A195C7F009835CA /* UIColor+KinveyWidgets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KinveyWidgets.h"; sourceTree = "<group>"; };
+		A7FDFF511A195C7F009835CA /* UIColor+KinveyWidgets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KinveyWidgets.m"; sourceTree = "<group>"; };
+		A7FDFF531A195C7F009835CA /* KWGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWGradientView.h; sourceTree = "<group>"; };
+		A7FDFF541A195C7F009835CA /* KWGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWGradientView.m; sourceTree = "<group>"; };
+		A7FDFF551A195C7F009835CA /* KWLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLineView.h; sourceTree = "<group>"; };
+		A7FDFF561A195C7F009835CA /* KWLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLineView.m; sourceTree = "<group>"; };
+		A7FDFF801A195D06009835CA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A7FDFF821A195D0C009835CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7FDFF841A195D13009835CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A7FDFF861A195D1E009835CA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A7FDFF881A195D30009835CA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A7FDFF8A1A195D37009835CA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A7FDFF8C1A195D41009835CA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A7FDFF8E1A195D4A009835CA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A7FDFF911A195D9C009835CA /* KinveyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KinveyKit.framework; sourceTree = "<group>"; };
+		A7FDFF961A195F20009835CA /* MKGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKGradientButton.h; sourceTree = "<group>"; };
+		A7FDFF971A195F20009835CA /* MKGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKGradientButton.m; sourceTree = "<group>"; };
+		A7FDFF9A1A195F20009835CA /* MKCGTypeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCGTypeHelpers.h; sourceTree = "<group>"; };
+		A7FDFF9B1A195F20009835CA /* MKCGTypeHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCGTypeHelpers.m; sourceTree = "<group>"; };
+		A7FDFF9D1A195F20009835CA /* MD5Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Helpers.h; sourceTree = "<group>"; };
+		A7FDFF9E1A195F20009835CA /* MD5Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Helpers.m; sourceTree = "<group>"; };
+		A7FDFF9F1A195F20009835CA /* NSArray+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFA01A195F20009835CA /* NSArray+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFA11A195F20009835CA /* NSDate+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFA21A195F20009835CA /* NSDate+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFA31A195F20009835CA /* NSString+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFA41A195F20009835CA /* NSString+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFA61A195F20009835CA /* UIColor+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFA71A195F20009835CA /* UIColor+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFA81A195F20009835CA /* UIFont+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFA91A195F20009835CA /* UIFont+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFAA1A195F20009835CA /* UIImage+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFAB1A195F20009835CA /* UIImage+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFAC1A195F20009835CA /* UILabel+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFAD1A195F20009835CA /* UILabel+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFAE1A195F20009835CA /* UIView+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFAF1A195F20009835CA /* UIView+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFB01A195F20009835CA /* UIWindow+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+MKHelpers.h"; sourceTree = "<group>"; };
+		A7FDFFB11A195F20009835CA /* UIWindow+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+MKHelpers.m"; sourceTree = "<group>"; };
+		A7FDFFB31A195F20009835CA /* mkgradientbutton_custom_class.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkgradientbutton_custom_class.png; sourceTree = "<group>"; };
+		A7FDFFB41A195F20009835CA /* mkgradientbutton_draguibutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkgradientbutton_draguibutton.png; sourceTree = "<group>"; };
+		A7FDFFB51A195F20009835CA /* mkgradientbuttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkgradientbuttons.png; sourceTree = "<group>"; };
+		A7FDFFB61A195F20009835CA /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		A7FDFFCA1A1969B3009835CA /* KinveySample.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinveySample.pch; sourceTree = "<group>"; };
+		A7FDFFCB1A196A1E009835CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A7FDFFCD1A196A26009835CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB03BD6AA55926F15C1CD6D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +199,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FDFFD01A196BC4009835CA /* FacebookSDK.framework in Frameworks */,
+				A7FDFFCE1A196A26009835CA /* UIKit.framework in Frameworks */,
+				A7FDFFCC1A196A1E009835CA /* Foundation.framework in Frameworks */,
+				A7FDFF8F1A195D4A009835CA /* SystemConfiguration.framework in Frameworks */,
+				A7FDFF8D1A195D41009835CA /* Social.framework in Frameworks */,
+				A7FDFF8B1A195D37009835CA /* Security.framework in Frameworks */,
+				A7FDFF891A195D30009835CA /* MobileCoreServices.framework in Frameworks */,
+				A7FDFF871A195D1E009835CA /* libsqlite3.dylib in Frameworks */,
+				A7FDFF851A195D13009835CA /* CoreLocation.framework in Frameworks */,
+				A7FDFF831A195D0C009835CA /* CoreGraphics.framework in Frameworks */,
+				A7FDFF921A195D9C009835CA /* KinveyKit.framework in Frameworks */,
+				A7FDFF811A195D06009835CA /* Accounts.framework in Frameworks */,
+				88B13AD7003B108206A1B601 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +225,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9235E0ACD051749C0595DDDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BB3268ECAE91C0070356EA5 /* Pods.debug.xcconfig */,
+				9EFC7D3860A6CE0C43EEE1F0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A776360E1A1CED3400FBA5C9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFEF31A195C17009835CA /* AppDelegate.h */,
+				A7FDFEF41A195C17009835CA /* AppDelegate.m */,
+				A77636071A1CEC8100FBA5C9 /* KinveySample-Bridging-Header.h */,
+				A77635FF1A1CE2C300FBA5C9 /* ListViewController.h */,
+				A77636001A1CE2C300FBA5C9 /* ListViewController.m */,
+				A7FDFEF91A195C17009835CA /* Main.storyboard */,
+				A7FDFEF61A195C17009835CA /* SignInViewController.h */,
+				A7FDFEF71A195C17009835CA /* SignInViewController.m */,
+				A776360B1A1CECF300FBA5C9 /* VideoComposition.h */,
+				A776360C1A1CED0000FBA5C9 /* VideoComposition.m */,
+				A7B41B251A1D487A0045048B /* MovieViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		A7FDFEE31A195C17009835CA = {
 			isa = PBXGroup;
 			children = (
+				A77636021A1CE57D00FBA5C9 /* README.md */,
 				A7FDFEEE1A195C17009835CA /* KinveySample */,
 				A7FDFF081A195C17009835CA /* KinveySampleTests */,
+				A7FDFF901A195D65009835CA /* Frameworks */,
 				A7FDFEED1A195C17009835CA /* Products */,
+				9235E0ACD051749C0595DDDF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +276,10 @@
 		A7FDFEEE1A195C17009835CA /* KinveySample */ = {
 			isa = PBXGroup;
 			children = (
-				A7FDFEF31A195C17009835CA /* AppDelegate.h */,
-				A7FDFEF41A195C17009835CA /* AppDelegate.m */,
-				A7FDFEF61A195C17009835CA /* ViewController.h */,
-				A7FDFEF71A195C17009835CA /* ViewController.m */,
-				A7FDFEF91A195C17009835CA /* Main.storyboard */,
-				A7FDFEFC1A195C17009835CA /* Images.xcassets */,
-				A7FDFEFE1A195C17009835CA /* LaunchScreen.xib */,
+				A776360E1A1CED3400FBA5C9 /* Main */,
 				A7FDFEEF1A195C17009835CA /* Supporting Files */,
+				A7FDFF931A195F20009835CA /* iOS-UI-Utils */,
+				A7FDFF151A195C7F009835CA /* KinveyWidgets */,
 			);
 			path = KinveySample;
 			sourceTree = "<group>";
@@ -96,8 +287,17 @@
 		A7FDFEEF1A195C17009835CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7B41B2B1A1E7C130045048B /* Global.h */,
+				A7B41B2C1A1E7C1D0045048B /* Project.h */,
+				A7B41B2D1A1E7C250045048B /* Project.m */,
+				A7FDFEFE1A195C17009835CA /* LaunchScreen.xib */,
+				A7FDFEFC1A195C17009835CA /* Images.xcassets */,
+				A77636081A1CEC8100FBA5C9 /* SNLog.swift */,
+				A77636051A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+				A77636041A1CEC4400FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
 				A7FDFEF01A195C17009835CA /* Info.plist */,
 				A7FDFEF11A195C17009835CA /* main.m */,
+				A7FDFFCA1A1969B3009835CA /* KinveySample.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +319,217 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A7FDFF151A195C7F009835CA /* KinveyWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF161A195C7F009835CA /* Button Widgets */,
+				A7FDFF231A195C7F009835CA /* Sign-In */,
+				A7FDFF4A1A195C7F009835CA /* Text Widgets */,
+				A7FDFF4E1A195C7F009835CA /* Utilities */,
+				A7FDFF521A195C7F009835CA /* Views */,
+			);
+			path = KinveyWidgets;
+			sourceTree = "<group>";
+		};
+		A7FDFF161A195C7F009835CA /* Button Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF171A195C7F009835CA /* KWLinkButton.h */,
+				A7FDFF181A195C7F009835CA /* KWLinkButton.m */,
+				A7FDFF191A195C7F009835CA /* KWSocialButton.h */,
+				A7FDFF1A1A195C7F009835CA /* KWSocialButton.m */,
+				A7FDFF1C1A195C7F009835CA /* resources */,
+			);
+			path = "Button Widgets";
+			sourceTree = "<group>";
+		};
+		A7FDFF1C1A195C7F009835CA /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF1D1A195C7F009835CA /* facebook.png */,
+				A7FDFF1E1A195C7F009835CA /* facebook@2x.png */,
+				A7FDFF1F1A195C7F009835CA /* linkedin.png */,
+				A7FDFF201A195C7F009835CA /* linkedin@2x.png */,
+				A7FDFF211A195C7F009835CA /* twitter.png */,
+				A7FDFF221A195C7F009835CA /* twitter@2x.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		A7FDFF231A195C7F009835CA /* Sign-In */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF241A195C7F009835CA /* KinveyKit */,
+				A7FDFF291A195C7F009835CA /* KWCreateAccountViewController.h */,
+				A7FDFF2A1A195C7F009835CA /* KWCreateAccountViewController.m */,
+				A7FDFF2B1A195C7F009835CA /* KWResendEmailVerificationController.h */,
+				A7FDFF2C1A195C7F009835CA /* KWResendEmailVerificationController.m */,
+				A7FDFF2D1A195C7F009835CA /* KWResetPasswordController.h */,
+				A7FDFF2E1A195C7F009835CA /* KWResetPasswordController.m */,
+				A7FDFF3E1A195C7F009835CA /* KWSignInBaseViewController.h */,
+				A7FDFF3F1A195C7F009835CA /* KWSignInBaseViewController.m */,
+				A7FDFF401A195C7F009835CA /* KWSignInViewController.h */,
+				A7FDFF411A195C7F009835CA /* KWSignInViewController.m */,
+				A7FDFF421A195C7F009835CA /* KWSignInViewControllerDelegate.h */,
+				A7FDFF441A195C7F009835CA /* resources */,
+			);
+			path = "Sign-In";
+			sourceTree = "<group>";
+		};
+		A7FDFF241A195C7F009835CA /* KinveyKit */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF251A195C7F009835CA /* FacebookSDK.framework */,
+				A7FDFF261A195C7F009835CA /* KCSSignInDelegate.h */,
+				A7FDFF271A195C7F009835CA /* KCSSignInDelegate.m */,
+				A7FDFF281A195C7F009835CA /* LICENSE */,
+			);
+			path = KinveyKit;
+			sourceTree = "<group>";
+		};
+		A7FDFF441A195C7F009835CA /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF451A195C7F009835CA /* lock.png */,
+				A7FDFF461A195C7F009835CA /* lock@2x.png */,
+				A7FDFF471A195C7F009835CA /* logo.png */,
+				A7FDFF481A195C7F009835CA /* user.png */,
+				A7FDFF491A195C7F009835CA /* user@2x.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		A7FDFF4A1A195C7F009835CA /* Text Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF4B1A195C7F009835CA /* KWIconTextField.h */,
+				A7FDFF4C1A195C7F009835CA /* KWIconTextField.m */,
+			);
+			path = "Text Widgets";
+			sourceTree = "<group>";
+		};
+		A7FDFF4E1A195C7F009835CA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF501A195C7F009835CA /* UIColor+KinveyWidgets.h */,
+				A7FDFF511A195C7F009835CA /* UIColor+KinveyWidgets.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A7FDFF521A195C7F009835CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF531A195C7F009835CA /* KWGradientView.h */,
+				A7FDFF541A195C7F009835CA /* KWGradientView.m */,
+				A7FDFF551A195C7F009835CA /* KWLineView.h */,
+				A7FDFF561A195C7F009835CA /* KWLineView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7FDFF901A195D65009835CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFFCD1A196A26009835CA /* UIKit.framework */,
+				A7FDFFCB1A196A1E009835CA /* Foundation.framework */,
+				A7FDFF911A195D9C009835CA /* KinveyKit.framework */,
+				A7FDFF801A195D06009835CA /* Accounts.framework */,
+				A7FDFF821A195D0C009835CA /* CoreGraphics.framework */,
+				A7FDFF861A195D1E009835CA /* libsqlite3.dylib */,
+				A7FDFF841A195D13009835CA /* CoreLocation.framework */,
+				A7FDFF881A195D30009835CA /* MobileCoreServices.framework */,
+				A7FDFF8A1A195D37009835CA /* Security.framework */,
+				A7FDFF8E1A195D4A009835CA /* SystemConfiguration.framework */,
+				A7FDFF8C1A195D41009835CA /* Social.framework */,
+				FB03BD6AA55926F15C1CD6D8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7FDFF931A195F20009835CA /* iOS-UI-Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF941A195F20009835CA /* Classes */,
+				A7FDFFB21A195F20009835CA /* doc */,
+				A7FDFFB61A195F20009835CA /* LICENSE.md */,
+			);
+			path = "iOS-UI-Utils";
+			sourceTree = "<group>";
+		};
+		A7FDFF941A195F20009835CA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF951A195F20009835CA /* Button Widgets */,
+				A7FDFF991A195F20009835CA /* CG Helpers */,
+				A7FDFF9C1A195F20009835CA /* Foundation Categories */,
+				A7FDFFA51A195F20009835CA /* UIKit Categories */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A7FDFF951A195F20009835CA /* Button Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF961A195F20009835CA /* MKGradientButton.h */,
+				A7FDFF971A195F20009835CA /* MKGradientButton.m */,
+			);
+			path = "Button Widgets";
+			sourceTree = "<group>";
+		};
+		A7FDFF991A195F20009835CA /* CG Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF9A1A195F20009835CA /* MKCGTypeHelpers.h */,
+				A7FDFF9B1A195F20009835CA /* MKCGTypeHelpers.m */,
+			);
+			path = "CG Helpers";
+			sourceTree = "<group>";
+		};
+		A7FDFF9C1A195F20009835CA /* Foundation Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFF9D1A195F20009835CA /* MD5Helpers.h */,
+				A7FDFF9E1A195F20009835CA /* MD5Helpers.m */,
+				A7FDFF9F1A195F20009835CA /* NSArray+MKHelpers.h */,
+				A7FDFFA01A195F20009835CA /* NSArray+MKHelpers.m */,
+				A7FDFFA11A195F20009835CA /* NSDate+MKHelpers.h */,
+				A7FDFFA21A195F20009835CA /* NSDate+MKHelpers.m */,
+				A7FDFFA31A195F20009835CA /* NSString+MKHelpers.h */,
+				A7FDFFA41A195F20009835CA /* NSString+MKHelpers.m */,
+			);
+			path = "Foundation Categories";
+			sourceTree = "<group>";
+		};
+		A7FDFFA51A195F20009835CA /* UIKit Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFFA61A195F20009835CA /* UIColor+MKHelpers.h */,
+				A7FDFFA71A195F20009835CA /* UIColor+MKHelpers.m */,
+				A7FDFFA81A195F20009835CA /* UIFont+MKHelpers.h */,
+				A7FDFFA91A195F20009835CA /* UIFont+MKHelpers.m */,
+				A7FDFFAA1A195F20009835CA /* UIImage+MKHelpers.h */,
+				A7FDFFAB1A195F20009835CA /* UIImage+MKHelpers.m */,
+				A7FDFFAC1A195F20009835CA /* UILabel+MKHelpers.h */,
+				A7FDFFAD1A195F20009835CA /* UILabel+MKHelpers.m */,
+				A7FDFFAE1A195F20009835CA /* UIView+MKHelpers.h */,
+				A7FDFFAF1A195F20009835CA /* UIView+MKHelpers.m */,
+				A7FDFFB01A195F20009835CA /* UIWindow+MKHelpers.h */,
+				A7FDFFB11A195F20009835CA /* UIWindow+MKHelpers.m */,
+			);
+			path = "UIKit Categories";
+			sourceTree = "<group>";
+		};
+		A7FDFFB21A195F20009835CA /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				A7FDFFB31A195F20009835CA /* mkgradientbutton_custom_class.png */,
+				A7FDFFB41A195F20009835CA /* mkgradientbutton_draguibutton.png */,
+				A7FDFFB51A195F20009835CA /* mkgradientbuttons.png */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +537,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7FDFF0F1A195C17009835CA /* Build configuration list for PBXNativeTarget "KinveySample" */;
 			buildPhases = (
+				C8E62716E35A65CACF3413A5 /* Check Pods Manifest.lock */,
 				A7FDFEE81A195C17009835CA /* Sources */,
 				A7FDFEE91A195C17009835CA /* Frameworks */,
 				A7FDFEEA1A195C17009835CA /* Resources */,
+				1113FD874AF253445D7EE4A1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +612,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FDFF5C1A195C7F009835CA /* facebook@2x.png in Resources */,
+				A7FDFF731A195C7F009835CA /* logo.png in Resources */,
+				A7FDFF5F1A195C7F009835CA /* twitter.png in Resources */,
+				A7FDFF711A195C7F009835CA /* lock.png in Resources */,
+				A7FDFF601A195C7F009835CA /* twitter@2x.png in Resources */,
+				A7FDFF751A195C7F009835CA /* user@2x.png in Resources */,
 				A7FDFEFB1A195C17009835CA /* Main.storyboard in Resources */,
+				A7FDFFC51A195F20009835CA /* mkgradientbutton_custom_class.png in Resources */,
+				A7FDFF631A195C7F009835CA /* LICENSE in Resources */,
+				A7FDFF5B1A195C7F009835CA /* facebook.png in Resources */,
+				A7FDFFC71A195F20009835CA /* mkgradientbuttons.png in Resources */,
+				A7FDFF741A195C7F009835CA /* user.png in Resources */,
+				A7FDFF5D1A195C7F009835CA /* linkedin.png in Resources */,
+				A7FDFF5E1A195C7F009835CA /* linkedin@2x.png in Resources */,
+				A7FDFF721A195C7F009835CA /* lock@2x.png in Resources */,
 				A7FDFF001A195C17009835CA /* LaunchScreen.xib in Resources */,
 				A7FDFEFD1A195C17009835CA /* Images.xcassets in Resources */,
+				A7FDFFC61A195F20009835CA /* mkgradientbutton_draguibutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,13 +642,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1113FD874AF253445D7EE4A1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8E62716E35A65CACF3413A5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A7FDFEE81A195C17009835CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7FDFEF81A195C17009835CA /* ViewController.m in Sources */,
+				A7FDFF761A195C7F009835CA /* KWIconTextField.m in Sources */,
+				A7FDFEF81A195C17009835CA /* SignInViewController.m in Sources */,
+				A77636011A1CE2C300FBA5C9 /* ListViewController.m in Sources */,
+				A7FDFF661A195C7F009835CA /* KWResetPasswordController.m in Sources */,
+				A7FDFFBF1A195F20009835CA /* UIColor+MKHelpers.m in Sources */,
+				A77636061A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
+				A7FDFF581A195C7F009835CA /* KWLinkButton.m in Sources */,
 				A7FDFEF51A195C17009835CA /* AppDelegate.m in Sources */,
+				A7FDFF6F1A195C7F009835CA /* KWSignInViewController.m in Sources */,
+				A7FDFF641A195C7F009835CA /* KWCreateAccountViewController.m in Sources */,
+				A7FDFFC11A195F20009835CA /* UIImage+MKHelpers.m in Sources */,
+				A7FDFF591A195C7F009835CA /* KWSocialButton.m in Sources */,
+				A7FDFF621A195C7F009835CA /* KCSSignInDelegate.m in Sources */,
+				A7FDFF7B1A195C7F009835CA /* KWLineView.m in Sources */,
+				A7FDFFC41A195F20009835CA /* UIWindow+MKHelpers.m in Sources */,
+				A7B41B2E1A1E7C250045048B /* Project.m in Sources */,
+				A7FDFFBD1A195F20009835CA /* NSDate+MKHelpers.m in Sources */,
+				A77636091A1CEC8100FBA5C9 /* SNLog.swift in Sources */,
+				A7FDFFB81A195F20009835CA /* MKGradientButton.m in Sources */,
+				A7FDFFC01A195F20009835CA /* UIFont+MKHelpers.m in Sources */,
+				A7B41B261A1D487A0045048B /* MovieViewController.swift in Sources */,
+				A7FDFFBE1A195F20009835CA /* NSString+MKHelpers.m in Sources */,
+				A7FDFF651A195C7F009835CA /* KWResendEmailVerificationController.m in Sources */,
+				A7FDFFC31A195F20009835CA /* UIView+MKHelpers.m in Sources */,
+				A7FDFFBB1A195F20009835CA /* MD5Helpers.m in Sources */,
+				A776360D1A1CED0000FBA5C9 /* VideoComposition.m in Sources */,
+				A7FDFF7A1A195C7F009835CA /* KWGradientView.m in Sources */,
+				A7FDFFBA1A195F20009835CA /* MKCGTypeHelpers.m in Sources */,
+				A7FDFF6E1A195C7F009835CA /* KWSignInBaseViewController.m in Sources */,
+				A7FDFF791A195C7F009835CA /* UIColor+KinveyWidgets.m in Sources */,
+				A7FDFFBC1A195F20009835CA /* NSArray+MKHelpers.m in Sources */,
+				A7FDFFC21A195F20009835CA /* UILabel+MKHelpers.m in Sources */,
 				A7FDFEF21A195C17009835CA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +788,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +823,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -341,21 +832,48 @@
 		};
 		A7FDFF101A195C17009835CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BB3268ECAE91C0070356EA5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KinveySample/KinveyWidgets/Sign-In/KinveyKit",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = KinveySample/KinveySample.pch;
 				INFOPLIST_FILE = KinveySample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KinveySample/KinveySample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A7FDFF111A195C17009835CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EFC7D3860A6CE0C43EEE1F0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KinveySample/KinveyWidgets/Sign-In/KinveyKit",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = KinveySample/KinveySample.pch;
 				INFOPLIST_FILE = KinveySample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KinveySample/KinveySample-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -412,6 +930,7 @@
 				A7FDFF111A195C17009835CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7FDFF121A195C17009835CA /* Build configuration list for PBXNativeTarget "KinveySampleTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +939,7 @@
 				A7FDFF141A195C17009835CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    (void) [[KCSClient sharedClient] initializeKinveyServiceForAppKey:@""
+                                                        withAppSecret:@""
+                                                         usingOptions:nil];
+
+    
     return YES;
 }
 
