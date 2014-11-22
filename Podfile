@@ -8,8 +8,9 @@ xcodeproj 'KinveySample'
 # http://guides.cocoapods.org/using/the-podfile.html
 #
 
-
-pod 'SDAVAssetExportSession', :git => 'https://github.com/rs/SDAVAssetExportSession.git'
+# Including SDAVAssetExportSession statically so that I can make changes.
+#
+# pod 'SDAVAssetExportSession', :git => 'https://github.com/rs/SDAVAssetExportSession.git'
 
 pod 'SVProgressHUD', '1.0'
 

@@ -185,12 +185,13 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         
         // Provide a callback closure to exportAsset() to be executed on successful
         // completion of export and save to Camera Roll.
-        
-        exportAsset(){[unowned self] (Void) -> Void in
+        //
+        // See notes in viewDidAppear for why we use [weak self] instead of [unowned self]
+        exportAsset(){[weak self] (Void) -> Void in
             
             // Request a thumbnail image.  We will get notified when it finishes at which time
             // we will call our delegate to complete the save.
-            self.player.requestThumbnailImagesAtTimes([0.1], timeOption: .Exact)
+            self!.player.requestThumbnailImagesAtTimes([0.1], timeOption: .Exact)
         
         }
 
@@ -454,11 +455,15 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
                 // Provide a callback for delegate method urlToView.
                 var closure: (NSURL!) -> Void = {assetURL in  }
                 
-                // Very important to use [unowned self] to avoid retain cycle.
+                // Very important to use [weak self] to avoid retain cycle.
                 // Otherwise this controller will not deinit when dismissed.
-                closure = {[unowned self] assetURL in
-                    self.videoURL = assetURL
-                    self.processLibraryMovie_0()
+                //
+                // [unowned self] will occasionally crash with the signature swift_aboutRetainUnowned
+                // http://stackoverflow.com/questions/24414998/why-does-weak-self-work-but-unowned-self-break-in-a-swift-closure
+                //
+                closure = {[weak self] assetURL in
+                    self!.videoURL = assetURL
+                    self!.processLibraryMovie_0()
                 }
                 
                 // Call our delegate to fetch the movie from Kinvey.  Upon completion we will display it.

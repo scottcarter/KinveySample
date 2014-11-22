@@ -261,7 +261,9 @@ const CGFloat thumbnailDimension = 100.0;  // Table height for thumbnails.
     
     NSDictionary *entry = @{@"image":squareImage, @"timestamp":[NSNumber numberWithInteger:timestamp]};
     
-    [self.movieArr addObject:entry];  // For table display
+    
+    // Add entry to front of the array
+    [self.movieArr insertObject:entry atIndex:0]; // For table display
     
 
     

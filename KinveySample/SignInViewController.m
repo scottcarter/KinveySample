@@ -93,6 +93,8 @@
     
     signInViewController.signInDelegate = signInDelegate;
     
+    signInViewController.socialLogins = @[];
+    
     // Show the sign in view controller.
     [signInViewController showModally];
     

@@ -12,6 +12,7 @@
 		A77636091A1CEC8100FBA5C9 /* SNLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77636081A1CEC8100FBA5C9 /* SNLog.swift */; };
 		A776360D1A1CED0000FBA5C9 /* VideoComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = A776360C1A1CED0000FBA5C9 /* VideoComposition.m */; };
 		A7A0B1CD1A1F856500248460 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0B1CC1A1F856500248460 /* Movie.m */; };
+		A7A0B1D21A20168D00248460 /* SDAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0B1D11A20168D00248460 /* SDAVAssetExportSession.m */; };
 		A7B41B261A1D487A0045048B /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B41B251A1D487A0045048B /* MovieViewController.swift */; };
 		A7B41B2E1A1E7C250045048B /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B41B2D1A1E7C250045048B /* Project.m */; };
 		A7FDFEF21A195C17009835CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFEF11A195C17009835CA /* main.m */; };
@@ -96,6 +97,9 @@
 		A776360C1A1CED0000FBA5C9 /* VideoComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoComposition.m; sourceTree = "<group>"; };
 		A7A0B1CB1A1F856500248460 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		A7A0B1CC1A1F856500248460 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		A7A0B1CF1A20167800248460 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A7A0B1D01A20168300248460 /* SDAVAssetExportSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAVAssetExportSession.h; sourceTree = "<group>"; };
+		A7A0B1D11A20168D00248460 /* SDAVAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAVAssetExportSession.m; sourceTree = "<group>"; };
 		A7B41B251A1D487A0045048B /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		A7B41B2B1A1E7C130045048B /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		A7B41B2C1A1E7C1D0045048B /* Project.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
@@ -254,6 +258,16 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		A7A0B1CE1A20165C00248460 /* SDAVAssetExportSession */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0B1D11A20168D00248460 /* SDAVAssetExportSession.m */,
+				A7A0B1D01A20168300248460 /* SDAVAssetExportSession.h */,
+				A7A0B1CF1A20167800248460 /* LICENSE */,
+			);
+			name = SDAVAssetExportSession;
+			sourceTree = "<group>";
+		};
 		A7FDFEE31A195C17009835CA = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +292,7 @@
 		A7FDFEEE1A195C17009835CA /* KinveySample */ = {
 			isa = PBXGroup;
 			children = (
+				A7A0B1CE1A20165C00248460 /* SDAVAssetExportSession */,
 				A776360E1A1CED3400FBA5C9 /* Main */,
 				A7FDFEEF1A195C17009835CA /* Supporting Files */,
 				A7FDFF931A195F20009835CA /* iOS-UI-Utils */,
@@ -685,6 +700,7 @@
 				A7FDFEF81A195C17009835CA /* SignInViewController.m in Sources */,
 				A77636011A1CE2C300FBA5C9 /* ListViewController.m in Sources */,
 				A7FDFF661A195C7F009835CA /* KWResetPasswordController.m in Sources */,
+				A7A0B1D21A20168D00248460 /* SDAVAssetExportSession.m in Sources */,
 				A7FDFFBF1A195F20009835CA /* UIColor+MKHelpers.m in Sources */,
 				A7FDFF581A195C7F009835CA /* KWLinkButton.m in Sources */,
 				A7FDFEF51A195C17009835CA /* AppDelegate.m in Sources */,

@@ -12,12 +12,15 @@ After saving an MP4 video to Kinvey, the user can view the thumbnails of the mos
 
 
 
-
 Caveats:
   * Proper error handling with retries, etc. is not yet implemented.
   * Video caching on the device is not enabled.  A fetch to Kinvey is made on every thumbnail selection.
-  * The project is functional, but limited testing has been done (and restricted to a real device).
+  * The project is functional, but has had limited testing.
   * There are some warnings, but these are within external libraries.
+  
+Known Issues:
+  * Most videos I tried worked fine, but I ran across one where a thumbnail could not be extracted and crashed (see caveat about error handling).
+  * I need to disable the Cancel button until a movie is fully loaded (viewing or saving).  Selecting Cancel during a movie load can cause a crash.
 
 
 ## MP4 details
