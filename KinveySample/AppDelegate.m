@@ -19,10 +19,11 @@
     // Override point for customization after application launch.
     
     
-    (void) [[KCSClient sharedClient] initializeKinveyServiceForAppKey:@""
-                                                        withAppSecret:@""
+    
+    (void) [[KCSClient sharedClient] initializeKinveyServiceForAppKey:@"insert app id"
+                                                        withAppSecret:@"insert app secret"
                                                          usingOptions:nil];
-
+    
     
     return YES;
 }

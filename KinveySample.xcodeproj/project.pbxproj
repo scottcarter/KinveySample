@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		88B13AD7003B108206A1B601 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB03BD6AA55926F15C1CD6D8 /* libPods.a */; };
 		A77636011A1CE2C300FBA5C9 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A77636001A1CE2C300FBA5C9 /* ListViewController.m */; };
-		A77636061A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = A77636051A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		A77636091A1CEC8100FBA5C9 /* SNLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77636081A1CEC8100FBA5C9 /* SNLog.swift */; };
 		A776360D1A1CED0000FBA5C9 /* VideoComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = A776360C1A1CED0000FBA5C9 /* VideoComposition.m */; };
+		A7A0B1CD1A1F856500248460 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0B1CC1A1F856500248460 /* Movie.m */; };
 		A7B41B261A1D487A0045048B /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B41B251A1D487A0045048B /* MovieViewController.swift */; };
 		A7B41B2E1A1E7C250045048B /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B41B2D1A1E7C250045048B /* Project.m */; };
 		A7FDFEF21A195C17009835CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FDFEF11A195C17009835CA /* main.m */; };
@@ -90,12 +90,12 @@
 		A77635FF1A1CE2C300FBA5C9 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		A77636001A1CE2C300FBA5C9 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		A77636021A1CE57D00FBA5C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A77636041A1CEC4400FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
-		A77636051A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		A77636071A1CEC8100FBA5C9 /* KinveySample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KinveySample-Bridging-Header.h"; sourceTree = "<group>"; };
 		A77636081A1CEC8100FBA5C9 /* SNLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNLog.swift; sourceTree = "<group>"; };
 		A776360B1A1CECF300FBA5C9 /* VideoComposition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoComposition.h; sourceTree = "<group>"; };
 		A776360C1A1CED0000FBA5C9 /* VideoComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoComposition.m; sourceTree = "<group>"; };
+		A7A0B1CB1A1F856500248460 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		A7A0B1CC1A1F856500248460 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		A7B41B251A1D487A0045048B /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		A7B41B2B1A1E7C130045048B /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		A7B41B2C1A1E7C1D0045048B /* Project.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
@@ -242,6 +242,8 @@
 				A77636071A1CEC8100FBA5C9 /* KinveySample-Bridging-Header.h */,
 				A77635FF1A1CE2C300FBA5C9 /* ListViewController.h */,
 				A77636001A1CE2C300FBA5C9 /* ListViewController.m */,
+				A7A0B1CB1A1F856500248460 /* Movie.h */,
+				A7A0B1CC1A1F856500248460 /* Movie.m */,
 				A7FDFEF91A195C17009835CA /* Main.storyboard */,
 				A7FDFEF61A195C17009835CA /* SignInViewController.h */,
 				A7FDFEF71A195C17009835CA /* SignInViewController.m */,
@@ -293,8 +295,6 @@
 				A7FDFEFE1A195C17009835CA /* LaunchScreen.xib */,
 				A7FDFEFC1A195C17009835CA /* Images.xcassets */,
 				A77636081A1CEC8100FBA5C9 /* SNLog.swift */,
-				A77636051A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
-				A77636041A1CEC4400FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
 				A7FDFEF01A195C17009835CA /* Info.plist */,
 				A7FDFEF11A195C17009835CA /* main.m */,
 				A7FDFFCA1A1969B3009835CA /* KinveySample.pch */,
@@ -680,12 +680,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A0B1CD1A1F856500248460 /* Movie.m in Sources */,
 				A7FDFF761A195C7F009835CA /* KWIconTextField.m in Sources */,
 				A7FDFEF81A195C17009835CA /* SignInViewController.m in Sources */,
 				A77636011A1CE2C300FBA5C9 /* ListViewController.m in Sources */,
 				A7FDFF661A195C7F009835CA /* KWResetPasswordController.m in Sources */,
 				A7FDFFBF1A195F20009835CA /* UIColor+MKHelpers.m in Sources */,
-				A77636061A1CEC6B00FBA5C9 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				A7FDFF581A195C7F009835CA /* KWLinkButton.m in Sources */,
 				A7FDFEF51A195C17009835CA /* AppDelegate.m in Sources */,
 				A7FDFF6F1A195C7F009835CA /* KWSignInViewController.m in Sources */,

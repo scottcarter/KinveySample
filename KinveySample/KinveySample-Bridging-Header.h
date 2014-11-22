@@ -4,9 +4,5 @@
 
 #import "SDAVAssetExportSession.h"
 
-#import "ALAssetsLibrary+CustomPhotoAlbum.h"
-
-#import "SVProgressHUD.h"
-
 #import "VideoComposition.h"
 

@@ -82,9 +82,6 @@
 
 - (IBAction)LoginAction:(UIButton *)sender {
     
-    FIXME()
-    [self performSegueWithIdentifier:@"listSegue" sender:self];
-    return;
     
     KWSignInViewController* signInViewController = [[KWSignInViewController alloc] init];
     
@@ -121,6 +118,11 @@
             NSLog(@"Kinvey Ping Failed with result %@",result);
         }
     }];
+    
+    
+    if ([KCSUser activeUser]) {
+        [self performSegueWithIdentifier:@"listSegue" sender:self];
+    }
         
 }
 

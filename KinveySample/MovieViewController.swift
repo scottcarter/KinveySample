@@ -15,6 +15,16 @@ import AVFoundation
 import MobileCoreServices
 
 
+@objc protocol MovieViewControllerDelegate {
+    func cancel()
+    
+    func save(assetURL: NSURL, thumbnail: UIImage)
+    
+
+    func urlToView(movieId: NSNumber, completion: (NSURL) -> (Void)) -> Void
+    
+}
+
 
 // UIImagePickerController requires both UINavigationControllerDelegate & UIImagePickerControllerDelegate
 // protocols.
@@ -67,9 +77,32 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
     // Formed from videoURL
     var videoAsset: AVAsset!
     
+    
+    // Exported MP4 file.  We make this a class variable so that it is accessible after a thumbnail
+    // generation so that we can pass it to our delegate.
+    var exportedMP4: NSURL!
+    
     var assetsLibrary: ALAssetsLibrary!
     
     var player: MPMoviePlayerController!
+    
+    
+    
+    @objc var delegate: MovieViewControllerDelegate!
+    
+    
+    // Identify how we got here.  Our delegate is responsible for setting this.
+    @objc var createMode: Bool = true
+    
+    // Used when createMode = false - we are viewing a selected video.
+    // This is the id of the movie.
+    @objc var movieId: NSNumber!
+    
+    
+    // It is possible to trigger viewDidAppear multiple times when createMode = false. 
+    // When viewing, one could maximize and then minimize video.  Use a flag to 
+    // make sure that we only load video once.
+    var viewAppeared: Bool = false
     
     
     
@@ -103,8 +136,23 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
     }
     
     
+    @IBAction func cancelAction(sender: UIBarButtonItem) {
+    
+        // Pause any currently running playback.
+        self.player?.pause()
+        
+        // Disable activity indicator
+        // It might be running in the event that we are loading a Kinvey movie in view mode.
+        self.activityIndicator.stopAnimating()
+        
+        if self.delegate != nil {
+            self.delegate.cancel()
+        }
+    }
+
+    
     // User will be selecting a movie from the photo library
-    @IBAction func libraryAction(sender: UIBarButtonItem) {
+    func libraryAction() -> Void {
         
         // Pause any currently running playback.
         self.player?.pause()
@@ -113,12 +161,19 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
     }
     
     
-    
-    // Save asset as MP4 to Camera roll.  This method (and associated button) is available when a movie
-    // is loaded from the Library.  The button to save is not available after taking a new
-    // movie since new movies are automatically saved to the Camera Roll.
+    // Save asset as MP4.  This method (and associated button) is available when a movie
+    // is loaded from the Library or a new movie is taken.
     //
+    // After the save we will capture a thumbnail which when done will trigger a delegate
+    // call to complete the save.
+    //
+    // Note that we don't ever stop the activity spinner as a result of a save.  Since our delegate has additional
+    // work to do (saves to Kinvey) we just allow this class to be deallocated (deinit) when dismissed.
     func saveAction() -> Void {
+        
+        // Remove save button
+        self.restoreInitialButtonItems()
+        
         
         // Pause any currently running playback.
         self.player?.pause()
@@ -130,17 +185,16 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         
         // Provide a callback closure to exportAsset() to be executed on successful
         // completion of export and save to Camera Roll.
-        var closure: (NSURL) -> Void = {NSURL in  }
         
+        exportAsset(){[unowned self] (Void) -> Void in
+            
+            // Request a thumbnail image.  We will get notified when it finishes at which time
+            // we will call our delegate to complete the save.
+            self.player.requestThumbnailImagesAtTimes([0.1], timeOption: .Exact)
         
-        // We don't wish to reference self strongly inside closure, so specify
-        // [unowned self]
-        closure = {[unowned self] assetURL in
-            // Disable activity indicator
-            self.activityIndicator.stopAnimating()
         }
+
         
-        exportAsset(closure)
         
     }
     
@@ -154,6 +208,8 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
     
     
     deinit {
+        SNLog.info("!!!deinit")
+        
         // Stop observing notifications.
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
@@ -163,6 +219,25 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func moviePlayerThumbnailImageRequestDidFinishNotification(notification: NSNotification) -> Void {
+        var notif: NSDictionary! = notification.userInfo
+        
+        
+        SNLog.info("\(notif)")
+        
+        // Not error checking thumbnail generation for now.
+        let image: UIImage = notif[MPMoviePlayerThumbnailImageKey] as UIImage
+        
+        // Call our delegate to complete the save
+        if self.delegate != nil {
+            
+            self.delegate.save(self.exportedMP4, thumbnail: image)
+        }
+        
+    }
+
     
     
     // Not currently using this notification.  Here for illustrative purposes.
@@ -240,48 +315,53 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        
-        
-        // Cleanup the tmp directory on each launch.
-        //
-        // Reference:
-        // http://stackoverflow.com/questions/9196443/how-to-remove-tmp-directory-files-of-an-ios-app
-        //
-        var fileManager: NSFileManager = NSFileManager.defaultManager()
-        var tmpDirectoryContents: [String] = fileManager.contentsOfDirectoryAtPath(NSTemporaryDirectory(), error: nil) as [String]
-        
-        for file in tmpDirectoryContents {
-            //var path: String = NSString(format: "%@%@", NSTemporaryDirectory(),file)
-            var path: String = NSTemporaryDirectory() + file
-            
-            fileManager.removeItemAtPath(path, error: nil)
-        }
-        
-        
         self.assetsLibrary = ALAssetsLibrary()
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerThumbnailImageRequestDidFinishNotification:", name: MPMoviePlayerThumbnailImageRequestDidFinishNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerPlaybackDidFinishNotification:", name: MPMoviePlayerPlaybackDidFinishNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerWillExitFullscreenNotification:", name: MPMoviePlayerWillExitFullscreenNotification, object: nil)
         
+
+        
+        
+        let toolbarItems: [UIBarButtonItem] =  self.toolbar.items as [UIBarButtonItem]
+        var flexSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
+
         
         // If we are on device, include Camera button
         #if (arch(i386) || arch(x86_64)) && os(iOS)
             
             // Simulator
             
-            #else
+            if createMode {
+                
+                // New items to add
+                var library: UIBarButtonItem = UIBarButtonItem(title: "Library", style: .Plain, target: self, action: "libraryAction")
+
+                // Set all toolbar items
+                self.toolbar.setItems([flexSpace, library] + toolbarItems, animated: false)
+
+            }
+            
+            
+        #else
             
             // Device
             
-            let toolbarItems: [UIBarButtonItem] =  self.toolbar.items as [UIBarButtonItem]
+            if createMode {
             
-            // New items to add
-            var flexSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
-            var camera: UIBarButtonItem = UIBarButtonItem(title: "Camera", style: .Plain, target: self, action: "cameraAction")
+                // New items to add
+                var camera: UIBarButtonItem = UIBarButtonItem(title: "Camera", style: .Plain, target: self, action: "cameraAction")
+                var library: UIBarButtonItem = UIBarButtonItem(title: "Library", style: .Plain, target: self, action: "libraryAction")
             
-            // Set all toolbar items
-            self.toolbar.setItems([flexSpace, camera] + toolbarItems, animated: false)
+                // Set all toolbar items
+                self.toolbar.setItems([flexSpace, camera, flexSpace, library] + toolbarItems, animated: false)
+            
+            }
+            
             
         #endif
         
@@ -307,7 +387,10 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
     
     override func viewDidLayoutSubviews() {
         
-        // SNLog.info("")
+        super.viewDidLayoutSubviews()
+        
+        
+        //g_log = SNLog.info("") as SNLog
         
         // Let's record status bar height for later use.
         // http://stackoverflow.com/questions/12991935/how-to-programmatically-get-ios-status-bar-height
@@ -344,6 +427,48 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         
     }
     
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        // We only want to process the following code on the first invocation of
+        // viewDidAppear.  It is possible in view mode for this method to fire
+        // multiple times (maximizing and minimizing video)
+        //
+        if viewAppeared {
+            return
+        }
+        
+        viewAppeared = true
+        
+        // If we are in view mode fetch the movie from our delegate and then
+        // tap into our Library processing pipeline to show it.
+        if !createMode {
+            if self.delegate != nil {
+                
+                // Start activity indicator
+                self.activityIndicator.hidden = false
+                self.activityIndicator.startAnimating()
+                
+                // Provide a callback for delegate method urlToView.
+                var closure: (NSURL!) -> Void = {assetURL in  }
+                
+                // Very important to use [unowned self] to avoid retain cycle.
+                // Otherwise this controller will not deinit when dismissed.
+                closure = {[unowned self] assetURL in
+                    self.videoURL = assetURL
+                    self.processLibraryMovie_0()
+                }
+                
+                // Call our delegate to fetch the movie from Kinvey.  Upon completion we will display it.
+                self.delegate.urlToView(movieId, completion: closure)
+                
+                
+            }
+        }
+        
+    }
     
     
     
@@ -390,8 +515,7 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
                 if sourceType == .Camera {
                     //SNLog.info("Movie type.  Taken by Camera.")
                     
-                    // Restore our initial set of Toolbar buttons, which will remove Save button if present.
-                    self.restoreInitialButtonItems()
+                    self.addSaveButton() // Add Save button if not present
                     
                     self.processCameraMovie(info)
                 }
@@ -450,8 +574,18 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         
         //self.player.fullscreen = true
         
+        
+        // Load up the movie and immediately pause.
         self.player.play()
         
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "pausePlayer:", userInfo: nil, repeats: false)
+        
+        
+    }
+    
+    
+    func pausePlayer(timer: NSTimer) -> Void {
+        self.player.pause()
     }
     
     
@@ -466,21 +600,6 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         self.videoAsset = AVURLAsset(URL: self.videoURL, options: nil)
         
         
-        // Provide a callback closure to exportAsset() to be executed on successful
-        // completion of export and save to Camera Roll.
-        var closure: (NSURL) -> Void = {NSURL in  }
-        
-        // We don't wish to reference self strongly inside closure, so specify
-        // [unowned self]
-        closure = { [unowned self] assetURL in
-            
-            // Disable activity indicator
-            self.activityIndicator.stopAnimating()
-            
-            // Automatically start playing movie after export and save to Camera Roll
-            self.playMovie(assetURL)
-        }
-        
         
         // Load some keys for videoAsset.  Currently only using duration with a
         // newly taken movie - see getVideoComposition() which is called via exportAsset()
@@ -490,14 +609,20 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
             
             // Completion handler is not called on the main thread, so we need the following dispatch.
             dispatch_sync(dispatch_get_main_queue(), { () -> Void in
-                self.exportAsset(closure)
+                self.processCameraMovie_0()
             })
         })
         
         
     }
     
-    
+    func processCameraMovie_0() {
+        
+        // Disable activity indicator
+        self.activityIndicator.stopAnimating()
+        
+        playMovie(self.videoURL)
+    }
     
     
     
@@ -641,7 +766,7 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
             // imagePickerController.allowsEditing = true  // Default = false
             // imagePickerController.showsCameraControls = false // Default = true
             
-            imagePickerController.videoMaximumDuration = 30 // 30 seconds max
+            imagePickerController.videoMaximumDuration = 10 // 10 seconds max
             
             
             // Record movie in 640 x 480.  Other options are:
@@ -850,10 +975,9 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
     
     
     
-    // Export movie as MP4 to temporary directory, and then save to Camera Roll
-    // in folder "VideoExport"
+    // Export movie as MP4 to temporary directory
     //
-    func exportAsset(callback: (assetURL: NSURL) -> Void) -> Void {
+    func exportAsset(callback: (Void) -> Void) -> Void {
         
         // self.videoURL was previously set when we loaded movie from Library
         let videoAsset: AVAsset = AVURLAsset(URL: self.videoURL, options: nil)
@@ -867,7 +991,7 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         NSFileManager.defaultManager().removeItemAtPath(exportPath, error: nil)
         
         
-        let outputURL: NSURL = NSURL(fileURLWithPath: exportPath)!
+        self.exportedMP4 = NSURL(fileURLWithPath: exportPath)!
         
         
         let videoTrack: AVAssetTrack = videoAsset.tracksWithMediaType(AVMediaTypeVideo).first as AVAssetTrack
@@ -906,8 +1030,7 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
         
         encoder.outputFileType = AVFileTypeMPEG4  // MP4 format
         
-        encoder.outputURL = outputURL
-        
+        encoder.outputURL = self.exportedMP4
         
         
         // Specific video settings for encoding
@@ -985,46 +1108,13 @@ class MovieViewController: UIViewController, UINavigationControllerDelegate, UII
             if encoder.status == .Completed {
                 SNLog.info("Video export succeeded")
                 
-                
-                /*
-                Save to a named photo album
-                
-                References:
-                
-                iOS5: Saving photos in custom photo album (+category for download)
-                http://www.touch-code-magazine.com/ios5-saving-photos-in-custom-photo-album-category-for-download/
-                
-                Grab code from here!
-                https://github.com/Kjuly/ALAssetsLibrary-CustomPhotoAlbum
-                
-                ALAssetsLibrary+CustomPhotoAlbum.h/.m
-                
-                See discussion here also:
-                http://stackoverflow.com/questions/10954380/save-photos-to-custom-album-in-iphones-photo-library
-                
-                */
-                
-                self.assetsLibrary.saveVideo(outputURL, toAlbum: "VideoExport", completion: { (assetURL, error) -> Void in
-                    if error != nil {
-                        SNLog.error("saveVideo completion block: \(error)")
-                    }
-                    else {
-                        SNLog.info("Completed saving video")
-                        
-                        
-                        dispatch_sync(dispatch_get_main_queue(), { () -> Void in
-                            
-                            // https://github.com/TransitApp/SVProgressHUD
-                            SVProgressHUD.showSuccessWithStatus("Saved to Camera Roll!")
-                            
-                            callback(assetURL: assetURL)
-                        })
-                    }
+                // We are not in the main thread here, so we use a dispatch.
+                dispatch_sync(dispatch_get_main_queue(), { () -> Void in
                     
-                    }, failure: { (error) -> Void in
-                        SNLog.error("saveVideo failure block: \(error)")
-                        Void()
+                    callback()
                 })
+                
+                
                 
             } // encoder.status == .Completed
                 

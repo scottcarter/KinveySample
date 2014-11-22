@@ -5,11 +5,19 @@ This project is intended to demonstrate a simple integration with [Kinvey](http:
 
 It embeds the functionality from my [Video Export project](https://github.com/scottcarter/VideoExport) in a mix of Objective-C and Swift code.
 
-The user can take a video up to 10 seconds in duration which is then exported as MP4 with a reduced bitrate.  A thumbnail of an early frame of the video is extracted.
 
-Both the MP4 video and thumbnail are saved to the Kinvey backend.   The user can view the thumbnails of the most recent 10 videos in a table view.  After selecting the thumbnail, the full video is fetched from Kinvey and played.
+Selecting the Compose icon on the right side of the navigation bar allows the user to take a new video or select an existing one from the Camera Roll.  New videos captured with this project are limited to 10 seconds.  After taking or selecting a video, a Save button appears on the toolbar of the movie view controller.   Selecting this button will export the video as MP4 at a reduced bitrate.  A thumbnail of an early frame of the video is extracted.  The video (and a thumbnail) are then saved to the Kinvey backend.
 
-The project does not currently demonstrate proper error handling with retries, etc.
+After saving an MP4 video to Kinvey, the user can view the thumbnails of the most recent 10 videos in a table view.  After selecting the thumbnail, the full video is fetched from Kinvey and played.
+
+
+
+
+Caveats:
+  * Proper error handling with retries, etc. is not yet implemented.
+  * Video caching on the device is not enabled.  A fetch to Kinvey is made on every thumbnail selection.
+  * The project is functional, but limited testing has been done (and restricted to a real device).
+  * There are some warnings, but these are within external libraries.
 
 
 ## MP4 details
