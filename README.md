@@ -11,14 +11,20 @@ Selecting the Compose icon on the right side of the navigation bar allows the us
 After saving an MP4 video to Kinvey, the user can view the thumbnails of the most recent 10 videos in a table view.  After selecting the thumbnail, the full video is fetched from Kinvey and played.
 
 
+## Screenshot
 
-Caveats:
+![example1 img](screenshot/TableView.png?raw=true)
+
+
+## Caveats
+
   * Proper error handling with retries, etc. is not yet implemented.
   * Video caching on the device is not enabled.  A fetch to Kinvey is made on every thumbnail selection.
   * The project is functional, but has had limited testing.
   * There are some warnings, but these are within external libraries.
   
-Known Issues:
+## Known Issues
+
   * Most videos I tried worked fine, but I ran across one where a thumbnail could not be extracted and crashed (see caveat about error handling).
   * I need to disable the Cancel button until a movie is fully loaded (viewing or saving).  Selecting Cancel during a movie load can cause a crash.
 
@@ -40,14 +46,14 @@ The following was used for the MP4 export:
 
 Navigate to the folder where you downloaded the project (Ex: KinveySample-master) and execute
 
-pod install
+**pod install**
 
 Assumes that CocoaPods is installed on your system.
 
 
 ### Workspace based
 
-When opening the project, be sure to select KinveySample.xcworkspace.
+When opening the project, be sure to select **KinveySample.xcworkspace**.
 
 
 ### Kinvey setup
@@ -58,8 +64,17 @@ Edit AppDelegate.m.  Within application:didFinishLaunchingWithOptions: look for 
 
 
 
+## More Screenshots
 
+### Movie taken/loaded and ready for save
 
+![example2 img](screenshot/MovieSave.png?raw=true)
+
+### Kinvey Sign-In
+
+Code obtained from [KinveyWidgets](https://github.com/KinveyApps/KinveyWidgets/tree/master/KinveyWidgets/Sign-In)
+
+![example3 img](screenshot/KinveySignIn.png?raw=true)
 
 
 
