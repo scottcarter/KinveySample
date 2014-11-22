@@ -66,7 +66,7 @@ Edit AppDelegate.m.  Within application:didFinishLaunchingWithOptions: look for 
 
 ## More Screenshots
 
-### Movie taken/loaded and ready for save
+Movie taken/loaded and ready for save
 
 ![example2 img](screenshot/MovieSave.png?raw=true)
 
